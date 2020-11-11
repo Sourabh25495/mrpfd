@@ -13,6 +13,32 @@
     }
   },
   {
+    "email": "Ethyl.Pagac23@gmail.com",
+    "name": "Rowena Sipes",
+    "dateOfBirth": "2006-11-03T04:35:47.097Z",
+    "phoneNumber": "1-063-578-7024",
+    "address": {
+      "street": "94135 Pollich Way",
+      "city": "Araburgh",
+      "state": "Oklahoma",
+      "zipCode": "28184-2383",
+      "country": "Guatemala"
+    }
+  },
+  {
+    "email": "Lavada.Brown12@yahoo.com",
+    "name": "Bradford Connelly",
+    "dateOfBirth": "1945-07-06T19:23:23.818Z",
+    "phoneNumber": "708-517-3605 x010",
+    "address": {
+      "street": "13951 Kihn Course",
+      "city": "Port Sarai",
+      "state": "Nevada",
+      "zipCode": "68307",
+      "country": "French Guiana"
+    }
+  },
+  {
     "email": "Glennie_Kris@yahoo.com",
     "name": "Chadd Gulgowski",
     "dateOfBirth": "1949-03-29T00:59:47.660Z",
