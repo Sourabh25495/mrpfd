@@ -1,0 +1,12 @@
+{
+  "name": "nodejs-challenge",
+  "version": "1.0.0",
+  "description": "MRP NodeJS Coding Challenge",
+  "main": "src/index.js",
+  "scripts": {
+    "data": "node ./bin/generate-data.js",
+    "start": "node ./src/index.js"
+  },
+  "author": "Cody Mercer <cmercer@mrpfd.com>",
+  "license": "UNLICENSED"
+}
