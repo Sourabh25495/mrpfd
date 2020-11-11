@@ -1,10 +1,4 @@
-const fs = require('fs');
-const path = require('path');
-
-const getUserData = () => {
-  const fileData = fs.readFileSync(path.join(__dirname, '../../../data/users.json'));
-  return JSON.parse(fileData);
-}
+const {getUserData} = require('../../../src/utils');
 
 const getAllUsers = (req, res) => {
   //get the existing userdata
