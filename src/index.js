@@ -1,14 +1,15 @@
-const users = require('./../data/users.json');
-
 const express = require('express');
 const bodyParser = require('body-parser');
-const db = require('../data/users.json');
-
+const router = express.Router();
 const routes = require('../routes/Routes')
 const app = express();
 
-const port = 8000;
 
+app.use(bodyParser.json());
+app.use(router)
+
+const port = 8000;
+app.use(express.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.listen(port, () => {

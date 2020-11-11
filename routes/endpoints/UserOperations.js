@@ -1,20 +1,18 @@
 const express = require('express');
-const bodyParser = require('body-parser');
-const { getAllUsers } = require('./UserOperations/GetUserList');
-const { deleteUserByEmail } = require('./UserOperations/DeleteUser')
-const app = express();
-
 const router = express.Router();
-
-app.use(bodyParser.json());
-app.use(router)
+const {getAllUsers} = require('./UserOperations/GetUserList');
+const {addNewUser} = require('./UserOperations/AddNewUser');
+const {deleteUserByEmail} = require('./UserOperations/DeleteUser');
 
 router.get('/get-user-list', (req, res) => {
   getAllUsers(req, res);
 });
 
 router.use('/delete-user/:email', (req, res) => {
-  deleteUserByEmail(req, res)
+  deleteUserByEmail(req, res);
 })
 
+router.post('/add-new-user', (req, res) => {
+  addNewUser(req, res);
+})
 module.exports = router;
