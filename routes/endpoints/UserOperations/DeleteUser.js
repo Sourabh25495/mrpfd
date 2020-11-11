@@ -8,11 +8,11 @@ const deleteUserByEmail = (req, res) => {
   const filterUser = existUsers.filter(user => user.email !== email);
   
   if (existUsers.length === filterUser.length) {
-    return res.status(409).send({error: true, msg: 'This user does not exist'})
+    return res.status(409).send({error: true, msg: 'This user does not exist'});
   }
   
-  saveUserData(filterUser)
-  res.send({success: true, msg: 'User removed successfully'})
+  saveUserData(filterUser);
+  res.send({success: true, msg: 'User removed successfully'});
 }
 
 module.exports = {
