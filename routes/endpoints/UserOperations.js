@@ -14,7 +14,6 @@ router.get('/get-user-list', (req, res) => {
 });
 
 router.use('/delete-user/:email', (req, res) => {
-  console.log("Delte", req.params)
   deleteUserByEmail(req, res)
 })
 
