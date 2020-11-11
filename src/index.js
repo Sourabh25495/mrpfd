@@ -6,7 +6,7 @@ const app = express();
 
 
 app.use(bodyParser.json());
-app.use(router)
+app.use(router);
 
 const port = 8000;
 app.use(express.json());

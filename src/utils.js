@@ -7,8 +7,8 @@ const getUserData = () => {
 }
 
 const saveUserData = (data) => {
-  const stringifyData = JSON.stringify(data)
-  fs.writeFileSync(path.join(__dirname, '../data/users.json'), stringifyData)
+  const stringifyData = JSON.stringify(data);
+  fs.writeFileSync(path.join(__dirname, '../data/users.json'), stringifyData);
 }
 
 module.exports = {

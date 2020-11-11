@@ -10,14 +10,14 @@ const updateUser = (req, res) => {
   );
   
   if (!doesUserExist) {
-    res.status(409).send({error: true, msg: 'User not exist'})
+    res.status(409).send({error: true, msg: 'User not exist'});
   } else {
     if (!userData.email || !userData.name || !userData.dateOfBirth || !userData.phoneNumber) {
       return res.status(400).send({error: true, msg: 'Bad Request! User data missing!'});
     } else {
       const updateUser = existUsers.filter( user => user.email !== userData.email );
       updateUser.push(userData);
-      saveUserData(updateUser)
+      saveUserData(updateUser);
       res.send({success: true, msg: 'User data Updated successfully'});
     }
   }
