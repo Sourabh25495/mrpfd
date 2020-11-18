@@ -64,13 +64,16 @@ const getDescendingSortOrder = (prop) => {
 const getUserListBySort = (req, res) => {
   const existUsers = getUserData();
   const {sortBy, sortDirection} = req.query;
-  
-  if (sortDirection === 'descending') {
-    const sorted = existUsers.sort(getDescendingSortOrder(sortBy));
-    res.send(sorted);
+  if (!sortBy || !sortDirection) {
+    return res.status(400).send({error: true, msg: 'Bad Request! Invalid Input!'});
   } else {
-    const sorted = existUsers.sort(getAscendingSortOrder(sortBy));
-    res.send(sorted);
+    if (sortDirection === 'descending') {
+      const sorted = existUsers.sort(getDescendingSortOrder(sortBy));
+      res.send(sorted);
+    } else {
+      const sorted = existUsers.sort(getAscendingSortOrder(sortBy));
+      res.send(sorted);
+    }
   }
 }
 
